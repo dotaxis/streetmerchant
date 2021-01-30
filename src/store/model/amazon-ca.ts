@@ -1,6 +1,16 @@
 import {Store} from './store';
 
 export const AmazonCa: Store = {
+  backoffStatusCodes: [403, 429, 503],
+  captchaDeterrent: {
+    hardLinks: [
+      'https://www.amazon.ca/video-games-hardware-accessories/b/?ie=UTF8&node=3198031&ref_=nav_cs_video_games_f61a1127b9254530a14e350a183f7841',
+      'https://www.amazon.ca/gp/new-releases/?ref_=nav_cs_newreleases_3700f09c268c435e83b755749c4fc4e9',
+      'https://www.amazon.ca/gcx/Gifts-for-Everyone/gfhz/?ref_=nav_cs_giftfinder_192be93f79264d46933b55cd454cfadf',
+    ],
+    searchTerms: ['nintendo', 'sony', 'xbox', 'magic+the+gathering', 'pokemon'],
+    searchUrl: 'https://www.amazon.ca/s?k=%%s&ref=nb_sb_noss_2',
+  },
   currency: '$',
   labels: {
     captcha: {

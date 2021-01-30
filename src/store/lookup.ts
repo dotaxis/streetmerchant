@@ -192,6 +192,7 @@ async function lookup(browser: Browser, store: Store) {
 
     page.setDefaultNavigationTimeout(config.page.timeout);
     await page.setUserAgent(await getRandomUserAgent());
+    await page.setExtraHTTPHeaders({'Accept-Encoding':'gzip, deflate', 'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'DNT':'1','Connection':'close', 'Upgrade-Insecure-Requests':'1'});
 
     let adBlockRequestHandler: any;
     let pageProxy;
